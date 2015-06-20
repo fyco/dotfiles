@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/private/etc/resolver'
+let g:netrw_dirhist_2='/usr/local'
+let g:netrw_dirhist_3='/Users/swoony/docker/clowder'
+let g:netrw_dirhist_4='/Users/swoony/src/appforge/dALib/da.repd_client'
+let g:netrw_dirhist_5='/Users/swoony/docker/clowder/clowder/otherhosts.conf'
+let g:netrw_dirhist_6='/Users/swoony/docker/lexi'
