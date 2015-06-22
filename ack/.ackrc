@@ -1,0 +1,12 @@
+# Use color, even when piping to another process
+--color
+
+# Ignores
+--ignore-dir=bin
+--ignore-dir=local
+--ignore-file=.tags
+
+# Add types
+--type-set=puppet=.pp,.erb
+
+

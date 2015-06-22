@@ -1,1 +1,34 @@
+set nocompatible
 color zenburn
+
+"tabs
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+"wildmenu
+set wildmenu
+set wildmode=list:longest
+
+"use relative line numbering
+set relativenumber
+
+"searching
+set ignorecase
+set smartcase
+set incsearch
+set showmatch
+set hlsearch
+"use perl sane regexp syntax
+nnoremap / /\v
+vnoremap / /\v
+"clear search highlights with <leader><space>
+nnoremap <leader><space> :noh<cr>
+
+"make tab key match bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
+
+"leader shortcuts
+nnoremap <leader>a :Ack 
