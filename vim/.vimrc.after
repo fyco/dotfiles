@@ -1,11 +1,15 @@
 set nocompatible
 color zenburn
 
-"tabs
+"whitespace
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+"splits
+set splitbelow
+set splitright
 
 "wildmenu
 set wildmenu
