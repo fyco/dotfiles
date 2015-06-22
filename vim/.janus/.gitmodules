@@ -1,6 +1,6 @@
 [submodule "Zenburn"]
 	path = Zenburn
 	url = https://github.com/jnurmine/Zenburn
-[submodule "lightline.vim"]
-	path = lightline.vim
-	url = https://github.com/itchyny/lightline.vim
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/bling/vim-airline
