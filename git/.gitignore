@@ -2,3 +2,4 @@
 *.sublime-workspace
 cscope.out
 .tags
+run_rsb
