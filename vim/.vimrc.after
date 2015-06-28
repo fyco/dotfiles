@@ -36,3 +36,13 @@ vnoremap <tab> %
 
 "leader shortcuts
 nnoremap <leader>a :Ack 
+
+"quick quit
+nnoremap <leader><leader> :xa<cr>
+
+"prevent accidentally starting help
+nnoremap <F1> <nop>
+inoremap <F1> <nop>
+
+"quick escape from input to command mode
+imap jj <Esc>
