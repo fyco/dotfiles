@@ -112,6 +112,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 
