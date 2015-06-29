@@ -1,9 +1,0 @@
-[submodule "vim/.janus/zenburn"]
-	path = vim/.janus/zenburn
-	url = https://github.com/jnurmine/Zenburn
-[submodule "vim/.janus/airline"]
-	path = vim/.janus/airline
-	url = https://github.com/bling/vim-airline
-[submodule "vim/.janus/bufferline"]
-	path = vim/.janus/bufferline
-	url = https://github.com/bling/vim-airline
