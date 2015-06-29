@@ -6,7 +6,6 @@
 "  \_/ |_|_| |_| |_|_|  \___|
 "
 """""""""""""""""""""""""""""
-color zenburn
 set nocompatible
 set paste
 let mapleader = ","
@@ -86,3 +85,16 @@ nnoremap <leader>a :Ack
 "░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█
 "░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "============================
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+call vundle#end()
+filetype plugin indent on
+
+"========================
+"░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
+"░█░░░█░█░█░░░█░█░█▀▄░▀▀█
+"░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
+"========================
+colorscheme zenburn

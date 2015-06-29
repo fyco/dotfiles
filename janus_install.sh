@@ -1,3 +1,0 @@
-#!/bin/bash
-cd $HOME
-curl -Lo- https://bit.ly/janus-bootstrap | bash
