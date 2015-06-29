@@ -87,9 +87,15 @@ inoremap <F1> <nop>
 " quick escape from input to command mode
 imap jj <Esc>
 
-" leader shortcuts
+" quick Ack
 nnoremap <leader>a :Ack
+
+" quick NERDTree
 nnoremap <leader>nt :NERDTreeToggle<cr>
+
+" quick buffer next/previous
+nnoremap [b :bp<cr>
+nnoremap ]b :bn<cr>
 
 "============================
 "░█▀█░█░░░█░█░█▀▀░▀█▀░█▀█░█▀▀
