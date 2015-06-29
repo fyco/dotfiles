@@ -1,48 +1,88 @@
-set nocompatible
+"""""""""""""""""""""""""""""
+"       _
+"__   _(_)_ __ ___  _ __ ___
+"\ \ / / | '_ ` _ \| '__/ __|
+" \ V /| | | | | | | | | (__
+"  \_/ |_|_| |_| |_|_|  \___|
+"
+"""""""""""""""""""""""""""""
 color zenburn
+set nocompatible
+set paste
+let mapleader = ","
 
-"whitespace
+" whitespace / tabs
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-"splits
+" tab completion
+set wildmenu
+set wildmode=list,longest,full
+
+"====================================
+"░▀█▀░█▀█░▀█▀░█▀▀░█▀▄░█▀▀░█▀█░█▀▀░█▀▀
+"░░█░░█░█░░█░░█▀▀░█▀▄░█▀▀░█▀█░█░░░█▀▀
+"░▀▀▀░▀░▀░░▀░░▀▀▀░▀░▀░▀░░░▀░▀░▀▀▀░▀▀▀
+"====================================
+" syntax highlighting
+syntax on
+
+" use relative line numbering
+set relativenumber
+" default split configuration
 set splitbelow
 set splitright
 
-"wildmenu
-set wildmenu
-set wildmode=list:longest
+" show matching parentheses/brackets
+set showmatch
 
-"use relative line numbering
-set relativenumber
-
-"searching
+"========================
+"░█▀▀░█▀▀░█▀█░█▀▄░█▀▀░█░█
+"░▀▀█░█▀▀░█▀█░█▀▄░█░░░█▀█
+"░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀
+"========================
+" be case insensitive
 set ignorecase
 set smartcase
 set incsearch
-set showmatch
+
+" highlight search matches
 set hlsearch
-"use perl sane regexp syntax
+
+" use every magic regexes
+" (more perl-like; no need to escape special characters)
 nnoremap / /\v
 vnoremap / /\v
+
 "clear search highlights with <leader><space>
 nnoremap <leader><space> :noh<cr>
 
-"make tab key match bracket pairs
+"================================
+"░█▄█░█▀█░█▀█░█▀█░▀█▀░█▀█░█▀▀░█▀▀
+"░█░█░█▀█░█▀▀░█▀▀░░█░░█░█░█░█░▀▀█
+"░▀░▀░▀░▀░▀░░░▀░░░▀▀▀░▀░▀░▀▀▀░▀▀▀
+"================================
+" make tab key match bracket pairs
 nnoremap <tab> %
 vnoremap <tab> %
 
-"leader shortcuts
-nnoremap <leader>a :Ack 
-
-"quick quit
+" quick quit
 nnoremap <leader><leader> :xa<cr>
 
-"prevent accidentally starting help
+" prevent accidentally starting help
 nnoremap <F1> <nop>
 inoremap <F1> <nop>
 
-"quick escape from input to command mode
+" quick escape from input to command mode
 imap jj <Esc>
+
+" leader shortcuts
+nnoremap <leader>a :Ack
+
+"============================
+"░█▀█░█░░░█░█░█▀▀░▀█▀░█▀█░█▀▀
+"░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█
+"░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
+"============================
