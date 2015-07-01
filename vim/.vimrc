@@ -132,7 +132,12 @@ set laststatus=2 " always show airline
 "░█░░░█░█░█░░░█░█░█▀▄░▀▀█
 "░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "========================
-colorscheme zenburn
+" for much nice, use:
+" -vim colorscheme: monokain
+" -iterm2 scheme: molokai
+" -iterm2 background: solarized_darcula.jpg
+" get the iterm2 stuff from https://github.com/mbadolato/iTerm2-Color-Schemes
+colorscheme monokain
 
 "================================
 "░█░█░▀█▀░█░░░█▀▄░█▄█░█▀▀░█▀█░█░█
