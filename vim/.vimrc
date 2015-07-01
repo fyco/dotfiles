@@ -97,6 +97,12 @@ nnoremap <leader>nt :NERDTreeToggle<cr>
 nnoremap [b :bp<cr>
 nnoremap ]b :bn<cr>
 
+" quick switch between absolute and relative line numbers
+nnoremap <leader>na :set norelativenumber<cr>:set number<cr>
+nnoremap <leader>nr :set nonumber<cr>:set relativenumber<cr>
+" quick turn off line numbers
+nnoremap <leader>nn :set norelativenumber<cr>:set nonumber<cr>
+
 "============================
 "░█▀█░█░░░█░█░█▀▀░▀█▀░█▀█░█▀▀
 "░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█
@@ -127,7 +133,8 @@ filetype plugin indent on
 " vim-airline
 "============================
 set laststatus=2 " always show airline
-
+let g:airline_detect_paste = 0
+let g:airline_theme = 'hybridline'
 "========================
 "░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
 "░█░░░█░█░█░░░█░█░█▀▄░▀▀█
