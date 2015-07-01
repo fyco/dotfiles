@@ -119,6 +119,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'bronson/vim-trailing-whitespace'
 call vundle#end()
 filetype plugin indent on
 
