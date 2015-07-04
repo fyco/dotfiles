@@ -97,6 +97,12 @@ nnoremap <leader>nr :set nonumber<cr>:set relativenumber<cr>
 " quick turn off line numbers
 nnoremap <leader>nn :set norelativenumber<cr>:set nonumber<cr>
 
+" quickfix list: easy next/previous/first/last mappings
+nnoremap <leader>[q :cprev<cr>
+nnoremap <leader>]q :cnext<cr>
+nnoremap <leader>[Q :cfirst<cr>
+nnoremap <leader>]Q :clast<cr>
+
 "============================
 "░█▀█░█░░░█░█░█▀▀░▀█▀░█▀█░█▀▀
 "░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█
@@ -122,6 +128,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 
@@ -142,7 +149,7 @@ let g:airline_theme = 'hybridline'
 "============================
 let g:gitgutter_enabled = 0 " start with gitgutter disabled
 nnoremap <leader>ggg :GitGutterToggle<cr> " toggle gitgutter
-nnoremap <leader>ggh :GitGutterLineHighlightsToggle " toggle line highlights
+nnoremap <leader>ggh :GitGutterLineHighlightsToggle<cr> " toggle line highlights
 
 "========================
 "░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
