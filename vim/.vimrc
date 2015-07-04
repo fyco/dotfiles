@@ -87,12 +87,6 @@ inoremap <F1> <nop>
 " quick escape from input to command mode
 imap jj <Esc>
 
-" quick Ack
-nnoremap <leader>a :Ack
-
-" quick NERDTree
-nnoremap <leader>nt :NERDTreeToggle<cr>
-
 " quick buffer next/previous
 nnoremap [b :bp<cr>
 nnoremap ]b :bn<cr>
@@ -127,8 +121,14 @@ Plugin 'bling/vim-bufferline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'hhff/SpacegrayEighties.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
+
+"============================
+" nerdtree
+"============================
+nnoremap <leader>nt :NERDTreeToggle<cr> " quick nerdtree toggle
 
 "============================
 " vim-airline
@@ -136,6 +136,13 @@ filetype plugin indent on
 set laststatus=2 " always show airline
 let g:airline_detect_paste = 0
 let g:airline_theme = 'hybridline'
+
+"============================
+" vim-gitgutter
+"============================
+let g:gitgutter_enabled = 0 " start with gitgutter disabled
+nnoremap <leader>ggg :GitGutterToggle<cr> " toggle gitgutter
+nnoremap <leader>ggh :GitGutterLineHighlightsToggle " toggle line highlights
 
 "========================
 "░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
