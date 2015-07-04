@@ -126,6 +126,7 @@ Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'hhff/SpacegrayEighties.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -135,12 +136,13 @@ filetype plugin indent on
 set laststatus=2 " always show airline
 let g:airline_detect_paste = 0
 let g:airline_theme = 'hybridline'
+
 "========================
 "░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
 "░█░░░█░█░█░░░█░█░█▀▄░▀▀█
 "░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "========================
-colorscheme monokain
+colorscheme SpacegrayEighties
 
 "================================
 "░█░█░▀█▀░█░░░█▀▄░█▄█░█▀▀░█▀█░█░█
