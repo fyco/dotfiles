@@ -3,3 +3,5 @@
 cscope.out
 .tags
 run_rsb
+tags
+.ycm_extra_conf.py

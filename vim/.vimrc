@@ -31,7 +31,7 @@ set directory^=~/.vim/_temp//      " where to put swap files.
 syntax on
 
 " use relative line numbering
-set relativenumber
+set number
 " default split configuration
 set splitbelow
 set splitright
@@ -140,11 +140,6 @@ let g:airline_theme = 'hybridline'
 "░█░░░█░█░█░░░█░█░█▀▄░▀▀█
 "░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "========================
-" for much nice, use:
-" -vim colorscheme: monokain
-" -iterm2 scheme: molokai
-" -iterm2 background: solarized_darcula.jpg
-" get the iterm2 stuff from https://github.com/mbadolato/iTerm2-Color-Schemes
 colorscheme monokain
 
 "================================
