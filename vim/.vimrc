@@ -131,8 +131,21 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-rooter'
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/ListToggle'
 call vundle#end()
 filetype plugin indent on
+
+"============================
+" YouCompleteMe
+"============================
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+let g:ycm_confirm_extra_conf = 0 "Do not ask when starting vim
+let g:syntastic_always_populate_loc_list = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+set tags+=./.tags
+set tags+=./tags
 
 "============================
 " nerdtree
