@@ -129,6 +129,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'hhff/SpacegrayEighties.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mileszs/ack.vim'
+Plugin 'airblade/vim-rooter'
 call vundle#end()
 filetype plugin indent on
 
