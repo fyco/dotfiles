@@ -148,6 +148,11 @@ set tags+=./.tags
 set tags+=./tags
 
 "============================
+" vim-bufferline
+"============================
+let g:bufferline_echo = 0 " don't print buffers in statusline
+
+"============================
 " nerdtree
 "============================
 nnoremap <leader>nt :NERDTreeToggle<cr> " quick nerdtree toggle
@@ -158,6 +163,7 @@ nnoremap <leader>nt :NERDTreeToggle<cr> " quick nerdtree toggle
 set laststatus=2 " always show airline
 let g:airline_detect_paste = 0
 let g:airline_theme = 'hybridline'
+let g:airline_section_y = ""
 
 "============================
 " vim-gitgutter
