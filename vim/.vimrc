@@ -11,6 +11,7 @@ set paste
 let mapleader = ","
 set encoding=utf-8
 set backspace=indent,eol,start
+set clipboard=unnamed " use the system clipboard
 
 " whitespace / tabs
 set tabstop=4
