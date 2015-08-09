@@ -127,7 +127,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
+Plugin 'mkitt/tabline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'hhff/SpacegrayEighties.vim'
@@ -161,12 +161,6 @@ set tags+=./.tags
 set tags+=./tags
 
 "============================
-" vim-bufferline
-"============================
-let g:bufferline_echo = 0 " don't print buffers in statusline
-let g:bufferline_rotate = 1 " scroll buffer list with fixed current buffer location
-
-"============================
 " nerdtree
 "============================
 nnoremap <leader>nt :NERDTreeToggle<cr> " quick nerdtree toggle
@@ -179,6 +173,7 @@ set laststatus=2 " always show airline
 let g:airline_detect_paste = 0
 let g:airline_theme = 'hybridline'
 let g:airline_section_y = ""
+let g:airline#extensions#tabline#enabled = 1
 
 "============================
 " vim-gitgutter
