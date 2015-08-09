@@ -183,6 +183,8 @@ nnoremap <leader>ggh :GitGutterLineHighlightsToggle<cr> " toggle line highlights
 "░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "========================
 colorscheme SpacegrayEighties
+hi IncSearch ctermfg=236 ctermbg=114 cterm=NONE guifg=#2d2d2d guibg=#99cc99 gui=NONE
+hi Search ctermfg=236 ctermbg=114 cterm=underline guifg=#2d2d2d guibg=#99cc99 gui=NONE
 
 "================================
 "░█░█░▀█▀░█░░░█▀▄░█▄█░█▀▀░█▀█░█░█
