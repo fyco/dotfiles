@@ -9,7 +9,6 @@
 --nosublime
 --ignore-dir=bin
 --ignore-dir=local
---ignore-dir=thirdparty
 --ignore-dir=packaging
 --ignore-file=is:cscope.out
 --ignore-file=is:tags

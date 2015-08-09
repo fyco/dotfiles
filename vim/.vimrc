@@ -6,6 +6,8 @@
 "  \_/ |_|_| |_| |_|_|  \___|
 "
 """""""""""""""""""""""""""""
+set ttyfast
+set ttyscroll=3
 set nocompatible
 set paste
 let mapleader = ","
@@ -31,7 +33,6 @@ set directory^=~/.vim/_temp//      " where to put swap files.
 " syntax highlighting
 syntax on
 
-" use relative line numbering
 set number
 " default split configuration
 set splitbelow
@@ -91,6 +92,8 @@ imap jj <Esc>
 " quick buffer next/previous
 nnoremap [b :bp<cr>
 nnoremap ]b :bn<cr>
+" quick buffer close without closing split
+nnoremap <C-c> :bp\|bd #<cr>
 
 " quick switch between absolute and relative line numbers
 nnoremap <leader>na :set norelativenumber<cr>:set number<cr>
@@ -142,9 +145,18 @@ filetype plugin indent on
 "============================
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
+nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
 let g:ycm_confirm_extra_conf = 0 "Do not ask when starting vim
 let g:syntastic_always_populate_loc_list = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_filetype_blacklist = {
+      \ 'cpp' : 1,
+      \ 'h' : 1,
+      \ 'hpp' : 1,
+      \ 'c' : 1,
+      \ 'cc' : 1,
+      \}
 set tags+=./.tags
 set tags+=./tags
 
@@ -152,11 +164,13 @@ set tags+=./tags
 " vim-bufferline
 "============================
 let g:bufferline_echo = 0 " don't print buffers in statusline
+let g:bufferline_rotate = 1 " scroll buffer list with fixed current buffer location
 
 "============================
 " nerdtree
 "============================
 nnoremap <leader>nt :NERDTreeToggle<cr> " quick nerdtree toggle
+nnoremap <leader>nf :NERDTreeFind<cr> " reveal in sidebar
 
 "============================
 " vim-airline
