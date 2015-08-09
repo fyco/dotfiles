@@ -150,13 +150,6 @@ nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
 let g:ycm_confirm_extra_conf = 0 "Do not ask when starting vim
 let g:syntastic_always_populate_loc_list = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_filetype_blacklist = {
-      \ 'cpp' : 1,
-      \ 'h' : 1,
-      \ 'hpp' : 1,
-      \ 'c' : 1,
-      \ 'cc' : 1,
-      \}
 set tags+=./.tags
 set tags+=./tags
 
