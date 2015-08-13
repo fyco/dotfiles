@@ -136,7 +136,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-rooter'
 Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/ListToggle'
+Plugin 'mihaifm/bufstop'
 call vundle#end()
 filetype plugin indent on
 
@@ -176,6 +178,20 @@ let g:airline#extensions#tabline#enabled = 1
 let g:gitgutter_enabled = 0 " start with gitgutter disabled
 nnoremap <leader>ggg :GitGutterToggle<cr> " toggle gitgutter
 nnoremap <leader>ggh :GitGutterLineHighlightsToggle<cr> " toggle line highlights
+
+"============================
+" tagbar
+"============================
+nmap <F8> :TagbarToggle<CR>
+
+"============================
+" bufstop
+"============================
+map <leader>b :Bufstop<CR>             " get a visual on the buffers
+map <leader>a :BufstopModeFast<CR>     " a command for quick switching
+map <C-tab>   :BufstopBack<CR>
+map <S-tab>   :BufstopForward<CR>
+let g:BufstopAutoSpeedToggle = 1       " now I can press ,3,3,3 to cycle the last 3 buffers
 
 "========================
 "░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
