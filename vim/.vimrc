@@ -204,7 +204,7 @@ let g:BufstopAutoSpeedToggle = 1       " now I can press ,3,3,3 to cycle the las
 "░█░░░█░█░█░░░█░█░█▀▄░▀▀█
 "░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "========================
-colorscheme SpacegrayEighties
+colorscheme Tomorrow-Night-Eighties
 hi IncSearch ctermfg=236 ctermbg=114 cterm=NONE guifg=#2d2d2d guibg=#99cc99 gui=NONE
 hi Search ctermfg=236 ctermbg=114 cterm=underline guifg=#2d2d2d guibg=#99cc99 gui=NONE
 
