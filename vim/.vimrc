@@ -6,9 +6,16 @@
 "  \_/ |_|_| |_| |_|_|  \___|
 "
 """""""""""""""""""""""""""""
+if !has('nvim')
 set ttyfast
 set ttyscroll=3
 set nocompatible
+endif
+
+if has('nvim')
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
 set paste
 let mapleader = ","
 set encoding=utf-8
@@ -137,7 +144,6 @@ Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-rooter'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/ListToggle'
 Plugin 'mihaifm/bufstop'
 call vundle#end()
 filetype plugin indent on
