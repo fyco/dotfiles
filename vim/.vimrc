@@ -110,9 +110,9 @@ nnoremap <leader>]q :cnext<cr>
 nnoremap <leader>[Q :cfirst<cr>
 nnoremap <leader>]Q :clast<cr>
 
-" neovim: exit terminal focus using ctrl+a or Esc
+" neovim: exit terminal focus using Esc or jj
 if has('nvim')
-tnoremap <c-a> <C-\><C-n>
+tnoremap jj <C-\><C-n>
 tnoremap <Esc> <C-\><C-n>
 endif
 
