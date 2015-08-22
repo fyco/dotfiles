@@ -16,7 +16,6 @@ if has('nvim')
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
-set paste
 let mapleader = ","
 set encoding=utf-8
 set backspace=indent,eol,start
@@ -82,9 +81,6 @@ nnoremap <leader><space> :noh<cr>
 "░█░█░█▀█░█▀▀░█▀▀░░█░░█░█░█░█░▀▀█
 "░▀░▀░▀░▀░▀░░░▀░░░▀▀▀░▀░▀░▀▀▀░▀▀▀
 "================================
-" make tab key match bracket pairs
-nnoremap <tab> %
-vnoremap <tab> %
 
 " quick quit
 nnoremap <leader><leader> :xa<cr>
@@ -94,7 +90,7 @@ nnoremap <F1> <nop>
 inoremap <F1> <nop>
 
 " quick escape from input to command mode
-imap jj <Esc>
+inoremap jj <Esc>
 
 " quick buffer next/previous
 nnoremap [b :bp<cr>
@@ -113,6 +109,12 @@ nnoremap <leader>[q :cprev<cr>
 nnoremap <leader>]q :cnext<cr>
 nnoremap <leader>[Q :cfirst<cr>
 nnoremap <leader>]Q :clast<cr>
+
+" neovim: exit terminal focus using ctrl+a or Esc
+if has('nvim')
+tnoremap <c-a> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
+endif
 
 "============================
 "░█▀█░█░░░█░█░█▀▀░▀█▀░█▀█░█▀▀
