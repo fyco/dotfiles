@@ -95,6 +95,9 @@ inoremap jj <Esc>
 " quick buffer next/previous
 nnoremap [b :bp<cr>
 nnoremap ]b :bn<cr>
+" quick tab next/previous
+nnoremap [t :tabp<cr>
+nnoremap ]t :tabn<cr>
 " quick buffer close without closing split
 nnoremap <C-c> :bp\|bd #<cr>
 
@@ -150,6 +153,11 @@ Plugin 'mihaifm/bufstop'
 call vundle#end()
 filetype plugin indent on
 
+"============================
+" CtrlP
+"============================
+let g:ctrlp_working_path_mode = ""
+let g:ctrlp_max_files=0
 "============================
 " YouCompleteMe
 "============================
