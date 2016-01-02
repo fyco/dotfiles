@@ -9,3 +9,4 @@ export HOMEBREW_MAKE_JOBS=5
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
