@@ -1,3 +1,10 @@
+; These and other configs shamelessly stolen from
+; Nathan Typanski's emacs config while I get this
+; thing on its feet:
+;
+; https://github.com/nathantypanski/emacs.d
+;
+
 (defun visit-term-buffer ()
   "Create or visit a terminal buffer."
   (interactive)

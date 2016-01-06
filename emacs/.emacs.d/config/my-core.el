@@ -1,3 +1,10 @@
+; These and other configs shamelessly stolen from
+; Nathan Typanski's emacs config while I get this
+; thing on its feet:
+;
+; https://github.com/nathantypanski/emacs.d
+;
+
 (eval-when-compile (require 'cl))
 (require 'cl-lib)
 
@@ -9,6 +16,13 @@
       "Inconsolata 12"
     "Gohufont-12")
   "Font used for graphical editing sessions.")
+
+; Line numbers
+(use-package linum-off
+  :ensure linum-off
+  :config
+  (progn
+    (global-linum-mode t)))
 
 ;; Don't show those horrible buttons
 (tool-bar-mode -1)
@@ -33,9 +47,6 @@
 
 ;; don't put intitial text in scratch buffer
 (setq initial-scratch-message nil)
-
-;'Woman' > 'man'.
-(defalias 'man 'woman)
 
 ;; Disable toolbars and splash screens.
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
