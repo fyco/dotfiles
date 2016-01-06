@@ -1,9 +1,9 @@
-; These and other configs shamelessly stolen from
-; Nathan Typanski's emacs config while I get this
-; thing on its feet:
-;
-; https://github.com/nathantypanski/emacs.d
-;
+;; These and other configs shamelessly stolen from
+;; Nathan Typanski's emacs config while I get this
+;; thing on its feet:
+;;
+;; https://github.com/nathantypanski/emacs.d
+;;
 
 (eval-when-compile (require 'cl))
 (require 'cl-lib)
@@ -33,8 +33,25 @@
 ;; lockfiles are evil.
 (setq create-lockfiles nil)
 
-;; also tabs are evil
+;; use spaces, not tabs
 (setq-default indent-tabs-mode nil)
+
+;; tab-width is the amount of space a tab occupies in the buffer
+;; not how many spaces the tab key will add when indent-tabs-mode is nil
+;; it is the distance between tab stops
+(setq-default tab-width 4)
+
+;; the sequence of tab stops. for 2, use (number-sequence 2 120 2)
+(setq tab-stop-list (number-sequence 4 120 4))
+
+;; major-mode specific indent levels
+(setq default-indent-level 2)
+
+;; use indent-level for evil-shift-width
+(setq evil-shift-width default-indent-level)
+
+;; major-mode specific indent levels
+(setq default-indent-level 2)
 
 ;; number columns in the status bar
 (column-number-mode)
