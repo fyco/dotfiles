@@ -152,8 +152,14 @@ Plugin 'airblade/vim-rooter'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'mihaifm/bufstop'
+Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin indent on
+
+"============================
+" golint
+"============================
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 "============================
 " CtrlP
