@@ -12,6 +12,7 @@
 (eval-when-compile
   (require 'use-package))
 
+(require 'xscheme)
 (require 'my-appearance)
 (require 'my-evil)
 (require 'my-core)

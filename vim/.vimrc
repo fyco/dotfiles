@@ -26,6 +26,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+" don't expand tabs for .go files
+au BufNewFile,BufRead *.go setlocal noet
 
 " store backup and swap files in a central location
 set backupdir^=~/.vim/_backup//    " where to put backup files.
