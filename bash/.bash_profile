@@ -10,3 +10,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
+alias ls='gls --color'
+# Initialization for FDK command line tools.Thu Jan 28 23:21:13 2016
+FDK_EXE="/Users/swoony/bin/FDK/Tools/osx"
+PATH=${PATH}:"/Users/swoony/bin/FDK/Tools/osx"
+export PATH
+export FDK_EXE
