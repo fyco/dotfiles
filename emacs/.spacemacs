@@ -255,10 +255,19 @@ in `dotspacemacs/user-config'."
             (lambda ()
               (setq company-clang-arguments '("-std=c++11"))
               (setq flycheck-clang-language-standard "c++11")
+              ;;(setq indent-tabs-mode nil)
+              ;;(setq c-syntactic-indentation nil)
+              (setq c-basic-offset 4)
+              (setq tab-width 4)
               (add-to-list 'company-c-headers-path-system
                            "/Library/Developer/CommandLineTools/usr/include/c++/v1")
               ))
   )
+  (defadvice evil-inner-word (around underscore-as-word activate)
+      (let ((table (copy-syntax-table (syntax-table))))
+          (modify-syntax-entry ?_ "w" table)
+            (with-syntax-table table
+                ad-do-it)))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
