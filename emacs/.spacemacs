@@ -248,6 +248,13 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  ;; Use mac command key as meta (only required for vanilla emacs; uneccessary
+  ;; with emacs-mac)
+  (setq mac-option-key-is-meta nil)
+  (setq mac-command-key-is-meta t)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier nil)
+
   (setq projectile-use-native-indexing t)
   (setq projectile-enable-caching t)
   (prefer-coding-system 'utf-8)
@@ -273,6 +280,12 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; make window navigation easier
+  (define-key evil-normal-state-map (kbd "C-h")   'evil-window-left)
+  (define-key evil-normal-state-map (kbd "C-j")   'evil-window-down)
+  (define-key evil-normal-state-map (kbd "C-k")   'evil-window-up)
+  (define-key evil-normal-state-map (kbd "C-l")   'evil-window-right)
+
   )
 
 
