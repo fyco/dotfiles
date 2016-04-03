@@ -260,12 +260,18 @@ in `dotspacemacs/user-config'."
   (prefer-coding-system 'utf-8)
   (add-hook 'c++-mode-hook
             (lambda ()
-              (setq company-clang-arguments '("-std=c++11"))
-              (setq flycheck-clang-language-standard "c++11")
-              ;;(setq indent-tabs-mode nil)
-              ;;(setq c-syntactic-indentation nil)
+              (c-set-style "stroustrup")
               (setq c-basic-offset 4)
               (setq tab-width 4)
+              ;;(setq indent-tabs-mode nil)
+              ;;(setq c-syntactic-indentation nil)
+
+              ;; line up argument lists across multiple lines under the opening paren
+              (c-set-offset 'arglist-cont-nonempty 'c-lineup-arglist-close-under-paren)
+              (c-set-offset 'arglist-close 'c-lineup-arglist-close-under-paren)
+
+              (setq company-clang-arguments '("-std=c++11"))
+              (setq flycheck-clang-language-standard "c++11")
               (add-to-list 'company-c-headers-path-system
                            "/Library/Developer/CommandLineTools/usr/include/c++/v1")
               ))
