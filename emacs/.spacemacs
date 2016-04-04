@@ -29,7 +29,7 @@ values."
      (git :variables
           git-magit-status-fullscreen t)
      ;; markdown
-     ;; org
+     org
      (shell :variables
             shell-default-shell 'multi-term
             shell-default-height 30
@@ -43,6 +43,8 @@ values."
      python
      go
      eyebrowse
+     php
+     ruby
      ;; themes-megapack
      ;; version-control
      )
