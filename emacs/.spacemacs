@@ -271,6 +271,8 @@ in `dotspacemacs/user-config'."
               ;; line up argument lists across multiple lines under the opening paren
               (c-set-offset 'arglist-cont-nonempty 'c-lineup-arglist-close-under-paren)
               (c-set-offset 'arglist-close 'c-lineup-arglist-close-under-paren)
+              (c-set-offset 'namespace-open 0)
+              (c-set-offset 'namespace-close 0)
 
               (setq company-clang-arguments '("-std=c++11"))
               (setq flycheck-clang-language-standard "c++11")

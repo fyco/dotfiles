@@ -135,10 +135,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
-" YouCompleteMe is a code completion engine with support for native semantic completion
-" of C/C++/Obj-C via Clang. It also supports Python, Go, Ruby, and others. See
-" https://github.com/Valloric/YouCompleteMe for additional setup instructions and gotchas.
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'mkitt/tabline.vim'
