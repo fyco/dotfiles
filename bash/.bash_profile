@@ -8,13 +8,18 @@ export PATH=$PATH:$HOME/src/puppet/modules/git/files/tools
 export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-#ports
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 #brew
 export HOMEBREW_MAKE_JOBS=5
 #ruby
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #aliases
-alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias ls='gls --color'
+#alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+#alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+#alias ls='gls --color'
+
+#locale
+export LANG=en_CA.UTF-8
+export LC_COLLATE=en_CA.UTF-8
+
+#ports
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
