@@ -476,11 +476,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>166 563 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1012 768 620 392 0 0 2560 1417 </string>
+	<string>572 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>212 119 1347 895 0 0 1680 1027 </string>
+	<string>613 118 570 377 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>155 274 1305 713 0 0 1680 1027 </string>
+	<string>133 526 570 377 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>455 1007 570 377 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_A862DD30-A466-4217-B429-D573E734C627</key>
@@ -1756,6 +1756,10 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
+	<integer>0</integer>
 	<key>NoSyncLastTipTime</key>
 	<real>476749308.28729701</real>
 	<key>NoSyncPermissionToShowTip</key>
@@ -1880,11 +1884,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/nightly.xml</string>
+	<string>https://iterm2.com/appcasts/testing3.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-21T19:10:02Z</date>
+	<date>2016-04-23T19:35:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowPaneTitles</key>
@@ -1907,6 +1911,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160228-nightly</string>
+	<string>2.9.20160313</string>
 </dict>
 </plist>
