@@ -135,6 +135,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'joshdick/onedark.vim'
+Plugin 'joshdick/airline-onedark.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'mkitt/tabline.vim'
@@ -188,7 +190,7 @@ nnoremap <leader>nf :NERDTreeFind<cr> " reveal in sidebar
 "============================
 set laststatus=2 " always show airline
 let g:airline_detect_paste = 0
-let g:airline_theme = 'hybridline'
+let g:airline_theme = 'onedark'
 let g:airline_section_y = ""
 let g:airline#extensions#tabline#enabled = 1
 
@@ -218,7 +220,7 @@ let g:BufstopAutoSpeedToggle = 1       " now I can press ,3,3,3 to cycle the las
 "░█░░░█░█░█░░░█░█░█▀▄░▀▀█
 "░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "========================
-colorscheme Tomorrow-Night-Eighties
+colorscheme onedark
 hi IncSearch ctermfg=236 ctermbg=114 cterm=NONE guifg=#2d2d2d guibg=#99cc99 gui=NONE
 hi Search ctermfg=236 ctermbg=114 cterm=underline guifg=#2d2d2d guibg=#99cc99 gui=NONE
 " neovim terminal emu colors
