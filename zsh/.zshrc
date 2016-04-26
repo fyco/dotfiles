@@ -3,8 +3,8 @@ export EDITOR='vim'
 
 # history
 HISTFILE=~/.histfile
-HISTSIZE=3000
-SAVEHIST=10000
+HISTSIZE=2000
+SAVEHIST=6000
 setopt appendhistory
 
 # extended globbing and error on glob mismatch

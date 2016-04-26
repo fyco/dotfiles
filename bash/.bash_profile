@@ -1,5 +1,14 @@
+#history
+HISTCONTROL=ignoreboth
+shopt -s histappend
+HISTSIZE=2000
+HISTFILESIZE=6000
+
+#colors
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+
+#prompt
 export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 #phrac
 export PATH=/usr/local/bin::$HOME/src/arcanist/bin:$PATH
@@ -13,9 +22,22 @@ export HOMEBREW_MAKE_JOBS=5
 #ruby
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #aliases
-alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias ls='gls --color'
+## neovim, if available
+neovim=$(which nvim)
+if [ -x "$neovim" ] ; then
+  alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+fi
+## ls
+alias ls='ls --color'
+
+# bash completions, if available
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 #locale
 export LANG=en_CA.UTF-8
