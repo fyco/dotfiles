@@ -58,3 +58,6 @@
 [submodule "vim/.vim/bundle/vim-go"]
 	path = vim/.vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go
+[submodule "zsh/.oh-my-zsh-customizations"]
+	path = zsh/.oh-my-zsh-customizations
+	url = https://github.com/metamode/ohmyzsh_custom
