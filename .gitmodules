@@ -7,3 +7,54 @@
 [submodule "zsh/.zsh-syntax-highlighting"]
 	path = zsh/.zsh-syntax-highlighting
 	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "vim/.vim/bundle/vim-colorschemes"]
+	path = vim/.vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
+[submodule "vim/.vim/bundle/onedark.vim"]
+	path = vim/.vim/bundle/onedark.vim
+	url = https://github.com/joshdick/onedark.vim
+[submodule "vim/.vim/bundle/airline-onedark.vim"]
+	path = vim/.vim/bundle/airline-onedark.vim
+	url = https://github.com/joshdick/airline-onedark.vim
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "vim/.vim/bundle/tabline.vim"]
+	path = vim/.vim/bundle/tabline.vim
+	url = https://github.com/mkitt/tabline.vim
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "vim/.vim/bundle/vim-trailing-whitespace"]
+	path = vim/.vim/bundle/vim-trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace
+[submodule "vim/.vim/bundle/SpacegrayEighties.vim"]
+	path = vim/.vim/bundle/SpacegrayEighties.vim
+	url = https://github.com/hhff/SpacegrayEighties.vim
+[submodule "vim/.vim/bundle/vim-gitgutter"]
+	path = vim/.vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/.vim/bundle/ack.vim"]
+	path = vim/.vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "vim/.vim/bundle/vim-rooter"]
+	path = vim/.vim/bundle/vim-rooter
+	url = https://github.com/airblade/vim-rooter
+[submodule "vim/.vim/bundle/syntastic"]
+	path = vim/.vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "vim/.vim/bundle/tagbar"]
+	path = vim/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "vim/.vim/bundle/bufstop"]
+	path = vim/.vim/bundle/bufstop
+	url = https://github.com/mihaifm/bufstop
+[submodule "vim/.vim/bundle/vim-go"]
+	path = vim/.vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go

@@ -132,14 +132,9 @@ endif
 "░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█
 "░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "============================
-" You need to install Vundle before the following lines will work:
-"
-" git clone https://github.com/gmarik/Vundle.vim.git ~/dotfiles/vim/.vim/bundle/Vundle.vim
-"
-" Then, you can call :PluginInstall from vim to install the plugins you define below:
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+# set rtp+=~/.vim/bundle/Vundle.vim
+# call vundle#begin()
+# Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'joshdick/onedark.vim'
 Plugin 'joshdick/airline-onedark.vim'
@@ -157,7 +152,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'mihaifm/bufstop'
 Plugin 'fatih/vim-go'
-call vundle#end()
+# call vundle#end()
 filetype plugin indent on
 
 "============================
