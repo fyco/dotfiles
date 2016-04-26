@@ -16,11 +16,6 @@ setopt notify
 # vim bindings
 # bindkey -v
 
-# help
-unalias run-help
-autoload run-help
-HELPDIR=/usr/local/share/zsh/help
-
 # ohmyzsh
 export ZSH=/Users/swoony/.oh-my-zsh
 plugins=(git brew)
