@@ -21,3 +21,6 @@ alias ls='gls --color'
 export LANG=en_CA.UTF-8
 export LC_COLLATE=en_CA.UTF-8
 export LANG=en_CA.UTF-8
+
+#z autojump
+. $HOME/.rupaz/z.sh
