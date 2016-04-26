@@ -132,27 +132,8 @@ endif
 "░█▀▀░█░░░█░█░█░█░░█░░█░█░▀▀█
 "░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
 "============================
-# set rtp+=~/.vim/bundle/Vundle.vim
-# call vundle#begin()
-# Plugin 'gmarik/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'joshdick/onedark.vim'
-Plugin 'joshdick/airline-onedark.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'mkitt/tabline.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'hhff/SpacegrayEighties.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mileszs/ack.vim'
-Plugin 'airblade/vim-rooter'
-Plugin 'scrooloose/syntastic'
-Plugin 'majutsushi/tagbar'
-Plugin 'mihaifm/bufstop'
-Plugin 'fatih/vim-go'
-# call vundle#end()
+" managed by pathogen and submodules
+execute pathogen#infect()
 filetype plugin indent on
 
 "============================
