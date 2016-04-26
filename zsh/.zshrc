@@ -17,7 +17,7 @@ setopt notify
 # bindkey -v
 
 # ohmyzsh
-export ZSH=/Users/swoony/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 plugins=(git brew)
 ZSH_THEME="robbyrussell"
 
