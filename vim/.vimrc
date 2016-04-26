@@ -91,8 +91,14 @@ nnoremap <leader><leader> :xa<cr>
 nnoremap <F1> <nop>
 inoremap <F1> <nop>
 
+" quicker window navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 " quick escape from input to command mode
-inoremap jj <Esc>
+inoremap fd <Esc>
 
 " quick buffer next/previous
 nnoremap [b :bp<cr>
@@ -115,9 +121,9 @@ nnoremap <leader>]q :cnext<cr>
 nnoremap <leader>[Q :cfirst<cr>
 nnoremap <leader>]Q :clast<cr>
 
-" neovim: exit terminal focus using Esc or jj
+" neovim: exit terminal focus using Esc or fd
 if has('nvim')
-tnoremap jj <C-\><C-n>
+tnoremap fd <C-\><C-n>
 tnoremap <Esc> <C-\><C-n>
 endif
 
