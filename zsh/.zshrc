@@ -34,6 +34,12 @@ export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+# aliases
+## neovim
+if [[ -x =nvim ]] ; then
+  alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+fi
+
 # manpath
 export MANPATH="/usr/local/man:$MANPATH"
 
