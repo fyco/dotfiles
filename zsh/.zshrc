@@ -60,5 +60,10 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # z autojump
 . $HOME/.rupaz/z.sh
 
+# terminfo fix for OSX/iTerm
+if [ -d $HOME/.terminfo ] ; then
+    export TERMINFO="$HOME/.terminfo"
+fi
+
 # zsh syntax highlighting
 source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

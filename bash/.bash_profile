@@ -46,3 +46,8 @@ export LANG=en_CA.UTF-8
 
 #z autojump
 . $HOME/.rupaz/z.sh
+
+# terminfo fix for OSX/iTerm
+if [ -d $HOME/.terminfo ] ; then
+    export TERMINFO="$HOME/.terminfo"
+fi
