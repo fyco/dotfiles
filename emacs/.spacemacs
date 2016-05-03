@@ -267,6 +267,10 @@ in `dotspacemacs/user-config'."
   (setq projectile-enable-caching t)
   (prefer-coding-system 'utf-8)
 
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook 'gofmt-before-save)))
+
   (add-hook 'c++-mode-hook
             (lambda ()
               (c-set-style "stroustrup")
@@ -278,6 +282,9 @@ in `dotspacemacs/user-config'."
               ;; line up argument lists across multiple lines under the opening paren
               (c-set-offset 'arglist-cont-nonempty 'c-lineup-arglist-close-under-paren)
               (c-set-offset 'arglist-close 'c-lineup-arglist-close-under-paren)
+              ;; brackets should be at the same indentation level as the statements they open
+              (c-set-offset 'substatement-open 0)
+              ;; don't increase indentation level inside namespaces
               (c-set-offset 'innamespace 0)
 
               (setq company-clang-arguments '("-std=c++11"))

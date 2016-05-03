@@ -34,8 +34,20 @@ export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-# aliases
-## neovim
+# fasd
+if [[ -x =fasd ]] ; then
+    fasd_cache="$HOME/.fasd-init-zsh"
+	if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+  		fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install >| "$fasd_cache"
+	fi
+	source "$fasd_cache"
+	unset fasd_cache
+    alias j='z'
+    alias jj='zz'
+fi
+
+
+# neovim alias
 if [[ -x =nvim ]] ; then
   alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 fi
@@ -56,9 +68,6 @@ export LC_ALL=en_US.UTF-8
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
-
-# z autojump
-. $HOME/.rupaz/z.sh
 
 # terminfo fix for OSX/iTerm
 if [ -d $HOME/.terminfo ] ; then
