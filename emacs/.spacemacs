@@ -47,6 +47,7 @@ values."
      ruby
      ;; themes-megapack
      ;; version-control
+     colors
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -243,13 +244,18 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
-   ))
+
+   )
+  )
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  ;; avoid using outdated compiled packages
+  (setq load-prefer-newer t)
+
   ;; Use mac command key as meta (only required for vanilla emacs; uneccessary
   ;; with emacs-mac)
   (setq mac-option-key-is-meta nil)
@@ -260,6 +266,7 @@ in `dotspacemacs/user-config'."
   (setq projectile-use-native-indexing t)
   (setq projectile-enable-caching t)
   (prefer-coding-system 'utf-8)
+
   (add-hook 'c++-mode-hook
             (lambda ()
               (c-set-style "stroustrup")
@@ -271,11 +278,11 @@ in `dotspacemacs/user-config'."
               ;; line up argument lists across multiple lines under the opening paren
               (c-set-offset 'arglist-cont-nonempty 'c-lineup-arglist-close-under-paren)
               (c-set-offset 'arglist-close 'c-lineup-arglist-close-under-paren)
-              (c-set-offset 'namespace-open 0)
-              (c-set-offset 'namespace-close 0)
+              (c-set-offset 'innamespace 0)
 
               (setq company-clang-arguments '("-std=c++11"))
               (setq flycheck-clang-language-standard "c++11")
+              (setq font-lock-maximum-decoration t)
               (add-to-list 'company-c-headers-path-system
                            "/Library/Developer/CommandLineTools/usr/include/c++/v1")
               ))
@@ -315,9 +322,6 @@ layers configuration. You are free to put any user code."
  '(background-color "#202020")
  '(background-mode dark)
  '(cursor-color "#cccccc")
- '(custom-safe-themes
-   (quote
-    ("f245c9f24b609b00441a6a336bcc556fe38a6b24bfc0ca4aedd4fe23d858ba31" "03e3e79fb2b344e41a7df897818b7969ca51a15a67dc0c30ebbdeb9ea2cd4492" "e254f8e18ba82e55572c5e18f3ac9c2bd6728a7e500f6cc216e0c6f6f8ea7003" "101a10b15bbbd0d5a0e56e4773e614962197886780afb2d62523a63a144ad96c" "cdfb22711f64d0e665f40b2607879fcf2607764b2b70d672ddaa26d2da13049f" "09669536b4a71f409e7e2fd56609cd7f0dff2850d4cbfb43916cc1843c463b80" "f21caace402180ab3dc5157d2bb843c4daafbe64aadc362c9f4558ac17ce43a2" "8e3f020f1ce69cfa0c1ebee4e198feb28dd7eb31b7d77927e9c790819210c654" "e033c4abd259afac2475abd9545f2099a567eb0e5ec4d1ed13567a77c1919f8f" "aa87469691932ff791f966bffb885ecd97ebfa4dc4d42e479f3819ac4a3fbcaf" "aed73c6d0afcf2232bb25ed2d872c7a1c4f1bda6759f84afc24de6a1aec93da8" "b6db49cec08652adf1ff2341ce32c7303be313b0de38c621676122f255ee46db" "91fba9a99f7b64390e1f56319c3dbbaed22de1b9676b3c73d935bf62277b799c" "1edf370d2840c0bf4c031a044f3f500731b41a3fd96b02e4c257522c7457882e" "cb18233197cedab557c70d171b511bed49cc702f428750925280090c31498bd2" "294834baa9ca874795a3181cce7aaf228b1e3fb3899587ffd3ae7546de328c90" "a2e7b508533d46b701ad3b055e7c708323fb110b6676a8be458a758dd8f24e27" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "68d36308fc6e7395f7e6355f92c1dd9029c7a672cbecf8048e2933a053cf27e6" "e97dbbb2b1c42b8588e16523824bc0cb3a21b91eefd6502879cf5baa1fa32e10" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "a1289424bbc0e9f9877aa2c9a03c7dfd2835ea51d8781a0bf9e2415101f70a7e" "705f3f6154b4e8fac069849507fd8b660ece013b64a0a31846624ca18d6cf5e1" default)))
  '(fci-rule-color "#37474f" t)
  '(foreground-color "#cccccc")
  '(hl-sexp-background-color "#1c1f26")
