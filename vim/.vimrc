@@ -156,10 +156,15 @@ nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
 nnoremap <leader>t ::YcmCompleter GetType<CR>
 let g:ycm_confirm_extra_conf = 0 "Do not ask when starting vim
 let g:ycm_register_as_syntastic_checker = 1
-let g:syntastic_always_populate_loc_list = 1
 let g:ycm_collect_identifiers_from_tags_files = 1 "use `ctags -R --fields=+l` to generate compatible tags
 set tags+=./.tags
 set tags+=./tags
+"============================
+" Syntastic
+"============================
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
 
 "============================
 " nerdtree
