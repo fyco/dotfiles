@@ -46,6 +46,10 @@ if [[ -x =fasd ]] ; then
     alias jj='zz'
 fi
 
+#rbenv
+if [[ -x =rbenv ]] ; then
+    eval "$(rbenv init -)"
+fi
 
 # neovim alias
 if [[ -x =nvim ]] ; then

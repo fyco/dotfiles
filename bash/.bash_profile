@@ -53,6 +53,12 @@ if [ -x "$fasd" ] ; then
     alias jj='zz'
 fi
 
+#rbenv
+rbenv=$(which rbenv)
+if [[ -x "$rbenv" ]] ; then
+    eval "$(rbenv init -)"
+fi
+
 
 #locale
 export LANG=en_CA.UTF-8
