@@ -54,7 +54,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(go-autocomplete
+                                      auto-complete-config)
+                                      ;;atom-one-dark)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -109,7 +111,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(zenburn
+   dotspacemacs-themes '(atom-one-dark
+                         zenburn
                          spacemacs-dark
                          spacemacs-light
                          solarized-light
@@ -268,9 +271,11 @@ in `dotspacemacs/user-config'."
   (setq projectile-enable-caching t)
   (prefer-coding-system 'utf-8)
 
+  (defun auto-complete-for-go ()
+    (auto-complete-mode 1))
   (add-hook 'go-mode-hook
             (lambda ()
-              (add-hook 'before-save-hook 'gofmt-before-save)))
+              (add-hook 'before-save-hook 'gofmt-before-save 'auto-complete-for-go)))
 
   (add-hook 'c++-mode-hook
             (lambda ()
@@ -310,7 +315,9 @@ layers configuration. You are free to put any user code."
   (define-key evil-normal-state-map (kbd "C-j")   'evil-window-down)
   (define-key evil-normal-state-map (kbd "C-k")   'evil-window-up)
   (define-key evil-normal-state-map (kbd "C-l")   'evil-window-right)
-
+  (with-eval-after-load 'go-mode
+    (require 'go-autocomplete))
+  (ac-config-default)
   )
 
 
@@ -330,6 +337,9 @@ layers configuration. You are free to put any user code."
  '(background-color "#202020")
  '(background-mode dark)
  '(cursor-color "#cccccc")
+ '(custom-safe-themes
+   (quote
+    ("4f0f2f5ec60a4c6881ba36ffbfef31b2eea1c63aad9fe3a4a0e89452346de278" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(fci-rule-color "#37474f" t)
  '(foreground-color "#cccccc")
  '(hl-sexp-background-color "#1c1f26")
