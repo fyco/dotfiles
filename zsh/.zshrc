@@ -33,6 +33,7 @@ export PATH=$PATH:$HOME/src/arcanist/bin:$HOME/src/puppet/modules/git/files/tool
 export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$HOME/bin:$HOME/bin/py
 
 # fasd
 if [[ -x =fasd ]] ; then

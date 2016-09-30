@@ -1197,9 +1197,11 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/src/iTerm2-Color-Schemes/schemes</string>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 521}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -1233,17 +1235,17 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>468 216 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1809 411 606 456 0 0 2560 1417 </string>
+	<string>1809 918 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>566 476 620 392 0 0 1680 1027 </string>
+	<string>568 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>544 210 1074 797 0 0 2560 1417 </string>
+	<string>102 83 1494 902 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>224 528 1207 741 0 0 2560 1417 </string>
+	<string>616 76 1032 951 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>144 166 1781 1203 0 0 2560 1417 </string>
+	<string>587 -20 871 1021 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>257 407 570 377 0 0 2560 1417 </string>
+	<string>138 28 1445 993 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>357 529 1081 881 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -2529,6 +2531,8 @@
 			<string>/Users/swoony</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
@@ -2537,12 +2541,21 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
 	<integer>0</integer>
+	<key>NoSyncInstallationId</key>
+	<string>D4C52B63-8470-4FAD-9B07-BFDBEBE12B7F</string>
 	<key>NoSyncLastTipTime</key>
 	<real>476749308.28729701</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
+	<key>NoSyncSavePanelSavedSettings_StartSessionLog</key>
+	<dict>
+		<key>Initial Directory</key>
+		<string>/Users/swoony</string>
+	</dict>
 	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
 	<true/>
+	<key>NoSyncTimeOfFirstLaunchForIncompatibilityWarnings</key>
+	<real>485726004.82584399</real>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>465362691.39748102</real>
 	<key>NoSyncTipsToNotShow</key>
@@ -2661,11 +2674,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/nightly.xml</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=10</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-02T04:33:26Z</date>
+	<date>2016-07-26T14:21:09Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowPaneTitles</key>
@@ -2686,9 +2699,9 @@
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
 	<key>findRegex_iTerm</key>
-	<false/>
+	<true/>
 	<key>iTerm Version</key>
-	<string>2.9.20160423-nightly</string>
+	<string>3.0.20160607-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
