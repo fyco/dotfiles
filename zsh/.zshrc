@@ -34,6 +34,11 @@ export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:$HOME/bin:$HOME/bin/py
+export PATH=/usr/local/sbin:$PATH
+## build flags
+export LDFLAGS=-L/usr/local/opt/openssl/lib
+export CPPFLAGS=-I/usr/local/opt/openssl/include
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 # fasd
 if [[ -x =fasd ]] ; then
