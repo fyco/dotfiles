@@ -146,19 +146,34 @@ set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 "============================
 let g:ctrlp_working_path_mode = ""
 let g:ctrlp_max_files=0
+
+"============================
+" Vim-Go
+"============================
+let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_build_constraints = 1
+"============================
+" Deoplete
+"============================
+let g:deoplete#enable_at_startup = 1
+
 "============================
 " YouCompleteMe
 "============================
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
-nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
-nnoremap <leader>t ::YcmCompleter GetType<CR>
-let g:ycm_confirm_extra_conf = 0 "Do not ask when starting vim
-let g:ycm_register_as_syntastic_checker = 1
-let g:ycm_collect_identifiers_from_tags_files = 1 "use `ctags -R --fields=+l` to generate compatible tags
-set tags+=./.tags
-set tags+=./tags
+" nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+" nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
+" nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
+" nnoremap <leader>t ::YcmCompleter GetType<CR>
+" let g:ycm_confirm_extra_conf = 0 "Do not ask when starting vim
+" let g:ycm_register_as_syntastic_checker = 1
+" let g:ycm_collect_identifiers_from_tags_files = 1 "use `ctags -R --fields=+l` to generate compatible tags
+" set tags+=./.tags
+" set tags+=./tags
+"
 "============================
 " Syntastic
 "============================

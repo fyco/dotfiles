@@ -18,6 +18,8 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     html
+     yaml
      markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -58,7 +60,6 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(go-autocomplete)
                                       ;;auto-complete-config)
-                                      ;;atom-one-dark)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -113,14 +114,11 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(zenburn
-                         atom-one-dark)
-                         ;;spacemacs-dark
-                         ;;spacemacs-light
-                         ;;solarized-light
-                         ;;solarized-dark
-                         ;;leuven
-                         ;;monokai)
+   dotspacemacs-themes '(base16-onedark
+                         zenburn
+                         base16-ocean
+                         base16-eighties
+                         arjen-grey)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -283,7 +281,8 @@ in `dotspacemacs/user-config'."
     (auto-complete-mode 1))
   (add-hook 'go-mode-hook
             (lambda ()
-              (add-hook 'before-save-hook 'gofmt-before-save 'auto-complete-for-go)))
+              (add-hook 'before-save-hook 'gofmt-before-save 'auto-complete-for-go)
+              (setq go-tab-width 4)))
 
   (add-hook 'c++-mode-hook
             (lambda ()
@@ -357,7 +356,7 @@ layers configuration. You are free to put any user code."
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (color-theme-sanityinc-tomorrow spacegray-theme hc-nenburn-theme mmm-mode markdown-toc markdown-mode gh-md atom-dark-theme org seq goto-chg undo-tree diminish yapfify uuidgen rake py-isort org-projectile org-download live-py-mode link-hint git-link evil-visual-mark-mode evil-unimpaired evil-ediff eshell-z dumb-jump column-enforce-mode color-identifiers-mode cargo toml-mode racer rust-mode flycheck-rust company-racer deferred spinner log4e gntp parent-mode request gitignore-mode pkg-info epl flx pos-tip pythonic bind-key powerline hydra alert projectile magit magit-popup git-commit with-editor iedit inf-ruby packed anaconda-mode avy highlight anzu smartparens flycheck go-mode helm helm-core popup async yasnippet php-mode f s dash package-build bind-map evil company auto-complete solarized-theme zenburn-theme xterm-color ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package toc-org stickyfunc-enhance srefactor spacemacs-theme spaceline smooth-scrolling smeargle shell-pop rvm ruby-tools ruby-test-mode rubocop rspec-mode robe restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-yapf popwin pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox page-break-lines orgit org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file neotree multi-term move-text magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio go-eldoc go-autocomplete gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu eshell-prompt-extras esh-help elisp-slime-nav drupal-mode disaster define-word cython-mode company-statistics company-quickhelp company-go company-c-headers company-anaconda cmake-mode clean-aindent-mode clang-format chruby bundler buffer-move bracketed-paste auto-yasnippet auto-highlight-symbol auto-compile atom-one-dark-theme aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
+    (web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data base16-theme-theme base16-onedark-theme-theme base16-onedark-theme base16-theme arjen-grey-theme minitest hide-comnt go-guru yaml-mode color-theme-sanityinc-tomorrow spacegray-theme hc-nenburn-theme mmm-mode markdown-toc markdown-mode gh-md atom-dark-theme org seq goto-chg undo-tree diminish yapfify uuidgen rake py-isort org-projectile org-download live-py-mode link-hint git-link evil-visual-mark-mode evil-unimpaired evil-ediff eshell-z dumb-jump column-enforce-mode color-identifiers-mode cargo toml-mode racer rust-mode flycheck-rust company-racer deferred spinner log4e gntp parent-mode request gitignore-mode pkg-info epl flx pos-tip pythonic bind-key powerline hydra alert projectile magit magit-popup git-commit with-editor iedit inf-ruby packed anaconda-mode avy highlight anzu smartparens flycheck go-mode helm helm-core popup async yasnippet php-mode f s dash package-build bind-map evil company auto-complete solarized-theme zenburn-theme xterm-color ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package toc-org stickyfunc-enhance srefactor spacemacs-theme spaceline smooth-scrolling smeargle shell-pop rvm ruby-tools ruby-test-mode rubocop rspec-mode robe restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters quelpa pyvenv pytest pyenv-mode py-yapf popwin pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el paradox page-break-lines orgit org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file neotree multi-term move-text magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio go-eldoc go-autocomplete gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu eshell-prompt-extras esh-help elisp-slime-nav drupal-mode disaster define-word cython-mode company-statistics company-quickhelp company-go company-c-headers company-anaconda cmake-mode clean-aindent-mode clang-format chruby bundler buffer-move bracketed-paste auto-yasnippet auto-highlight-symbol auto-compile atom-one-dark-theme aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
