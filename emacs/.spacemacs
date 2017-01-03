@@ -279,10 +279,7 @@ in `dotspacemacs/user-config'."
 
   (defun auto-complete-for-go ()
     (auto-complete-mode 1))
-  (add-hook 'go-mode-hook
-            (lambda ()
-              (add-hook 'before-save-hook 'gofmt-before-save 'auto-complete-for-go)
-              (setq go-tab-width 4)))
+  (setq-default go-tab-width 4)
 
   (add-hook 'c++-mode-hook
             (lambda ()
