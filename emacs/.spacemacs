@@ -76,7 +76,7 @@ before layers configuration.
 You should not put any user code in there besides modifying the variable
 values."
   ;; Add any custom theme paths here.
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/private/base16-emacs-oneburn/")
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/private/base16-oneburn-emacs/")
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
