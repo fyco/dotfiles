@@ -16,12 +16,6 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 # ruby
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# neovim
-neovim=$(which nvim)
-if [ -x "$neovim" ] ; then
-  alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-fi
-
 # ls
 alias ls='ls --color'
 alias l='ls -al --color'

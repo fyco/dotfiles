@@ -37,18 +37,13 @@ if [[ -x =rbenv ]] ; then
     eval "$(rbenv init -)"
 fi
 
-# neovim
-if [[ -x =nvim ]] ; then
-  alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-fi
-
 # source ohmyzsh.sh
 source $ZSH/oh-my-zsh.sh
 
 # terminfo fix for OSX/iTerm
-if [ -d $HOME/.terminfo ] ; then
-    export TERMINFO="$HOME/.terminfo"
-fi
+# if [ -d $HOME/.terminfo ] ; then
+#     export TERMINFO="$HOME/.terminfo"
+# fi
 
 # zsh syntax highlighting
 source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
